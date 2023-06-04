@@ -6,7 +6,7 @@ public class Test{
 
 
     public void method1(){
-        if krankzettelTage > 2
+        if krankzettelTage > 3
                 then Meldung schicken, dass Krankmeldung hochgeladen werden muss
     }
 
