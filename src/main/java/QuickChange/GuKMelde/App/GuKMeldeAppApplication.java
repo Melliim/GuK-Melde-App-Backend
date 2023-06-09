@@ -10,4 +10,5 @@ public class GuKMeldeAppApplication {
 		SpringApplication.run(GuKMeldeAppApplication.class, args);
 	}
 
+
 }
