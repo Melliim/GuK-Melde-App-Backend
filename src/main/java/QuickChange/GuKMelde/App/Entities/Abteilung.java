@@ -1,5 +1,4 @@
 package QuickChange.GuKMelde.App.Entities;
-
 import jakarta.persistence.*;
 
 @Entity
