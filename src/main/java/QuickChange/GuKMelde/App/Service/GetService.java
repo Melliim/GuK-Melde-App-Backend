@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class ServiceClass {
+public class GetService {
 
     @Autowired
     AbteilungRepositiry abteilungRepositiry;
