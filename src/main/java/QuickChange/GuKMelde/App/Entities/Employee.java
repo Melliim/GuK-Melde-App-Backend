@@ -2,43 +2,50 @@ package QuickChange.GuKMelde.App.Entities;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "employee_id")
     private Long id;
-    @ManyToOne
-    @JoinColumn(name = "vorgesetzer_id")
-    private Employee vorgesetzer;
-    @ManyToOne
-    @JoinColumn(name = "sellvertreter_id")
-    private Employee stellvertreter_vorgesetzer;
     private String username;
     private String password;
+    @OneToMany
+    private List<Krankmeldung> krankmeldungList;
     private String email;
     @ManyToOne
-    @JoinColumn(name = "abteilung_id")
     private Abteilung abteilung;
+    private String nachname;
+    private boolean sexIsFemale;
 
     public Employee(){
     }
 
-    public Employee getVorgesetzer() {
-        return vorgesetzer;
+    public List<Krankmeldung> getKrankmeldungList() {
+        return krankmeldungList;
     }
 
-    public void setVorgesetzer(Employee vorgesetzer) {
-        this.vorgesetzer = vorgesetzer;
+    public void setKrankmeldungList(List<Krankmeldung> krankmeldungList) {
+        this.krankmeldungList = krankmeldungList;
     }
 
-    public Employee getStellvertreter_vorgesetzer() {
-        return stellvertreter_vorgesetzer;
+    public String getNachname() {
+        return nachname;
     }
 
-    public void setStellvertreter_vorgesetzer(Employee stellvertreter_vorgesetzer) {
-        this.stellvertreter_vorgesetzer = stellvertreter_vorgesetzer;
+    public void setNachname(String nachname) {
+        this.nachname = nachname;
     }
+
+    public boolean isSexIsFemale() {
+        return sexIsFemale;
+    }
+
+    public void setSexIsFemale(boolean sexIsFemale) {
+        this.sexIsFemale = sexIsFemale;
+    }
+
 
     public String getEmail() {
         return email;

@@ -10,6 +10,7 @@ import QuickChange.GuKMelde.App.Repos.KrankenkasseRepository;
 import QuickChange.GuKMelde.App.Repos.KrankmeldungRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PostMapping;
 
 @Service
 public class PostService {
@@ -22,7 +23,6 @@ public class PostService {
     KrankenkasseRepository krankenkasseRepository;
     @Autowired
     KrankmeldungRepository krankmeldungRepository;
-
 
     public Krankmeldung saveKrankmeldung(Krankmeldung krankmeldung) {
         return krankmeldungRepository.save(krankmeldung);

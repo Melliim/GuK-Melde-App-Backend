@@ -1,18 +1,28 @@
 package QuickChange.GuKMelde.App.Entities;
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 public class Abteilung {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @OneToOne
-    @JoinColumn(name = "boss_id")
     private Employee boss;
     @OneToOne
-    @JoinColumn(name = "stell_boss_id")
     private Employee stell_boss;
     private String bezeichnung;
+    @OneToMany
+    private List<Employee> employee;
+
+    public void setEmployee(List<Employee> employee) {
+        this.employee = employee;
+    }
+
+    public List<Employee> getEmployee() {
+        return employee;
+    }
 
     public Employee getBoss() {
         return boss;

@@ -11,16 +11,29 @@ public class Krankmeldung {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "employee_id")
     private Employee mitarbeiter;
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "krankenkasse_id")
     private Krankenkasse krankenkasse;
     private Date startdatum;
     private Date enddatum;
     //true, if lohnfortzahlung wurde aktiviert
     private boolean lohnfortzahlung;
+    //ture if personalabteilung hat bestätigt
+    private boolean bestatigt;
+
+
+
+
+    public boolean isBestatigt() {
+        return bestatigt;
+    }
+
+    public void setBestatigt(boolean bestatigt) {
+        this.bestatigt = bestatigt;
+    }
 
     public Employee getMitarbeiter() {
         return mitarbeiter;
