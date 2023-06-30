@@ -1,0 +1,6 @@
+2023-06-30 14:57:35 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Das Objekt wurde bereits geschlossen
+The object is already closed [90007-214]
+2023-06-30 15:23:46 jdbc[23]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Das Objekt wurde bereits geschlossen
+The object is already closed [90007-214]
