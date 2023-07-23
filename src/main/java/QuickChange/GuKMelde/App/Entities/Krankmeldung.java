@@ -23,9 +23,16 @@ public class Krankmeldung {
     private boolean lohnfortzahlung;
     //ture if personalabteilung hat bestätigt
     private boolean bestatigt;
+    @Lob
+    private String image;
 
+    public String getImage() {
+        return image;
+    }
 
-
+    public void setImage(String base64_img) {
+        this.image = base64_img;
+    }
 
     public boolean isBestatigt() {
         return bestatigt;

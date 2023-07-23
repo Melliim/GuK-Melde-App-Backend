@@ -14,8 +14,6 @@ public class Employee {
     @OneToMany
     private List<Krankmeldung> krankmeldungList;
     private String email;
-    @ManyToOne
-    private Abteilung abteilung;
     private String nachname;
     private boolean sexIsFemale;
 
@@ -79,11 +77,4 @@ public class Employee {
         this.password = password;
     }
 
-    public Abteilung getAbteilung() {
-        return abteilung;
-    }
-
-    public void setAbteilung(Abteilung abteilung) {
-        this.abteilung = abteilung;
-    }
 }

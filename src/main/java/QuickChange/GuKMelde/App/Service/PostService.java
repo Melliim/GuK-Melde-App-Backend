@@ -25,6 +25,7 @@ public class PostService {
     KrankmeldungRepository krankmeldungRepository;
 
     public Krankmeldung saveKrankmeldung(Krankmeldung krankmeldung) {
+        System.out.println(krankmeldung.getImage());
         return krankmeldungRepository.save(krankmeldung);
     }
 

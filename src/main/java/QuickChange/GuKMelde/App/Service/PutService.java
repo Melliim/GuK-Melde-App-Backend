@@ -17,7 +17,7 @@ public class PutService {
 
 
     public Krankmeldung updateKrankmeldung(Krankmeldung krankmeldung) {
-        System.out.println(krankmeldung.getId());
+
     Optional<Krankmeldung> existing = krankmeldungRepository.findById(krankmeldung.getId());
     Krankmeldung  krankmeldung1 = existing.get();
 
@@ -31,5 +31,9 @@ public class PutService {
     return krankmeldungRepository.save(krankmeldung1);
 
 
+    }
+
+    public void deleteKrankmeldung(Long id){
+        krankmeldungRepository.deleteById(id);
     }
 }
